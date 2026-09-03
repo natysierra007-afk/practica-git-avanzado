@@ -7,6 +7,10 @@ para practicar comandos avanzados de Git.
 - Sumar
 - Restar
 - Multiplicar
+- Dividir (valida división por cero)
+- Potencia
+- Raíz cuadrada (valida números negativos)
+- Porcentaje
 
 ## 📝 Cómo ejecutar
 ```
@@ -55,50 +59,35 @@ git config user.email "tu-correo"
 ```
 git log --oneline
 ```
-Verás algo como:
-```
-a1b2c3d agrego cosas
-cbf1618 arreglo
-fd78525 agrego funcion
-e6375a2 primer commit
-```
 
 ### Paso 3 — Corregir el ÚLTIMO commit con amend
-El mensaje "agrego cosas" no sigue el formato de conventional 
-commits. Corrígelo:
 ```
 git commit --amend -m "docs: agregar instrucciones del proyecto"
 ```
-Verifica con `git log --oneline` — el mensaje del último commit 
-ya cambió.
 
 ### Paso 4 — Practicar reset
-Deshaz el commit que acabas de corregir, usando `--soft`:
 ```
 git reset --soft HEAD~1
-```
-Ejecuta `git log --oneline` — notarás que ese commit YA NO 
-aparece. Ejecuta `git status` — verás que los cambios siguen 
-ahí, listos para commitear de nuevo:
-```
 git commit -m "docs: agregar instrucciones del proyecto"
 ```
 
 ### Paso 5 — Nuevos commits (conventional commits)
-Agrega al menos 2 mejoras al proyecto. Escribe TÚ MISMO el 
-mensaje, siguiendo el formato:
-- `feat:` para funcionalidad nueva
-- `docs:` para cambios en documentación
-- `fix:` para corregir un error
+Se agregaron las siguientes mejoras al proyecto:
+1. Función `dividir` con validación de división por cero
+2. Docstrings en todas las funciones
+3. Funciones `potencia`, `raiz_cuadrada` y `porcentaje`
 
 ### Paso 6 — Subir a tu repositorio
 ```
 git push -u origin main
 ```
-### Investigación adicional
-Ejecuta git reflog. En tu README.md, en una sección 
-"Investigación adicional", explica en 2-3 líneas qué información 
-muestra este comando.
+
+## 🔍 Investigación adicional
+El comando `git reflog` muestra el historial completo de movimientos 
+de HEAD (commits, amends, resets, checkouts, etc.), incluso aquellos 
+que ya no son visibles con `git log`. Es útil para recuperar commits 
+o cambios que parecían "perdidos" después de un `reset --hard` u 
+otras operaciones destructivas.
 
 ## ✅ Entrega
 Link de tu repositorio (fork) + pantallazo de "git log --oneline"
