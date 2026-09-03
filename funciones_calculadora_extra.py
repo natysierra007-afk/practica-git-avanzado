@@ -1,3 +1,5 @@
+# Calculadora en Python - practica de Git avanzado
+# Autor: Nataly
 # ============================================
 # CALCULADORA - Funciones adicionales
 # Agreguen estas funciones a su calculadora.py,
