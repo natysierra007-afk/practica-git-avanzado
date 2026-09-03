@@ -81,6 +81,10 @@ Se agregaron las siguientes mejoras al proyecto:
 ```
 git push -u origin main
 ```
+### Investigación adicional
+Ejecuta git reflog. En tu README.md, en una sección 
+"Investigación adicional", explica en 2-3 líneas qué información 
+muestra este comando.
 
 ## 🔍 Investigación adicional
 El comando `git reflog` muestra el historial completo de movimientos 
